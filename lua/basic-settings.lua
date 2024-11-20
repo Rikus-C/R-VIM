@@ -19,9 +19,18 @@ vim.api.nvim_set_keymap('v', '<Down>', '<Cmd>normal! j<CR>', { noremap = true, s
 vim.api.nvim_set_keymap('v', '<Left>', '<Cmd>normal! h<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<Right>', '<Cmd>normal! l<CR>', { noremap = true, silent = true })
 
-
 -- Disable line wrapping (line overflow)
--- vim.opt.wrap = false
+vim.opt.wrap = false
+
+-- Yank to clipboard in normal mode
+vim.api.nvim_set_keymap('n', 'Y', '"+y', { noremap = true, silent = true })
+
+-- Yank to clipboard in visual mode
+vim.api.nvim_set_keymap('v', 'y', '"+y', { noremap = true, silent = true })
+
+-- Yank to clipboard in operator-pending mode (e.g., when using `y` in a motion command)
+vim.api.nvim_set_keymap('o', 'y', '"+y', { noremap = true, silent = true })
+
 
 
 

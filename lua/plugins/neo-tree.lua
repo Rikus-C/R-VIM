@@ -1,13 +1,17 @@
 StartDir = vim.fn.getcwd()
+MainName = "Gadgetron"
 DocsDir = "~/Documents/"
-TokensDir = "~/Documents/git_projects/Git-Tokens/"
-ProADir = "~/Documents/MissionLink/mls-v0.0.1/"
-ProBDir = "~/Documents/git_projects/Digital-Twin-And-SCADA/"
-ProCDir = "~/Documents/git_projects/Trend-Viewer/"
-ProDDir = "~/Documents/git_projects/Data-Logger/"
-ProEDir = "~/Documents/git_projects/LP100-Remote-Control/"
-ProFDir = "~/Documents/git_projects/LiDAR-SBS/"
-ProGDir = "~/Documents/MissionLink/iom-t1-v0.0.1/"
+TokensDir = "~/Documents/" .. MainName .. "/Tokens/"
+
+ProADir = "" 
+ProBDir = "~/Documents/" .. MainName .. "/"
+ProCDir = "~/Documents/" .. MainName .. "/Clients/"
+ProDDir = "~/Documents/" .. MainName .. "/Internal/"
+ProEDir = "~/Documents/" .. MainName .. "/Internal/Technical/"
+ProFDir = "~/Documents/" .. MainName .. "/Internal/Technical/Software/"
+ProGDir = "~/Documents/" .. MainName .. "/Internal/Technical/Software/Embedded/"
+ProHDir = "~/Documents/" .. MainName .. "/Internal/Technical/Software/Embedded/stm32_f411re_template/"
+ProIDir = "~/Documents/" .. MainName .. "/Internal/Technical/Software/Embedded/Gadgetron_Controller/"
 
 return {
     "nvim-neo-tree/neo-tree.nvim",
@@ -38,6 +42,8 @@ return {
         vim.keymap.set("n", "<F5>", ":Neotree " .. ProEDir .. " filesystem reveal left<CR>") -- Neotree @ Current Project
         vim.keymap.set("n", "<F6>", ":Neotree " .. ProFDir .. " filesystem reveal left<CR>") -- Neotree @ Current Project
         vim.keymap.set("n", "<F7>", ":Neotree " .. ProGDir .. " filesystem reveal left<CR>") -- Neotree @ Current Project
+        vim.keymap.set("n", "<F8>", ":Neotree " .. ProHDir .. " filesystem reveal left<CR>") -- Neotree @ Current Project
+        vim.keymap.set("n", "<F9>", ":Neotree " .. ProIDir .. " filesystem reveal left<CR>") -- Neotree @ Current Project
         vim.keymap.set("n", "<C-a>", ":Neotree close<CR>") -- Neotree close
     end
 }
