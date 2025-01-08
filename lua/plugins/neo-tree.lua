@@ -1,17 +1,17 @@
 StartDir = vim.fn.getcwd()
-MainName = "Gadgetron"
+MainName = "Safari_Systems"
 DocsDir = "~/Documents/"
 TokensDir = "~/Documents/" .. MainName .. "/Tokens/"
 
 ProADir = "" 
 ProBDir = "~/Documents/" .. MainName .. "/"
-ProCDir = "~/Documents/" .. MainName .. "/Clients/"
-ProDDir = "~/Documents/" .. MainName .. "/Internal/"
-ProEDir = "~/Documents/" .. MainName .. "/Internal/Technical/"
-ProFDir = "~/Documents/" .. MainName .. "/Internal/Technical/Software/"
-ProGDir = "~/Documents/" .. MainName .. "/Internal/Technical/Software/Embedded/"
-ProHDir = "~/Documents/" .. MainName .. "/Internal/Technical/Software/Embedded/stm32_f411re_template/"
-ProIDir = "~/Documents/" .. MainName .. "/Internal/Technical/Software/Embedded/Gadgetron_Controller/"
+ProCDir = "~/Documents/" .. MainName .. "/modules/"
+ProDDir = "~/Documents/" .. MainName .. "/RCM_100_Firmware/"
+ProEDir = "~/Documents/" .. MainName .. "/heltec_code/"
+ProFDir = "~/Documents/" .. MainName .. "/products/embedded_level/RCM_101_LoRa_Card/RCM_101_Firmware/"
+ProGDir = "~/Documents/" .. MainName .. "/internal/technical/software/embedded/"
+ProHDir = "~/Documents/" .. MainName .. "/internal/technical/software/embedded/stm32_f411re_template/"
+ProIDir = "~/Documents/" .. MainName .. "/internal/technical/software/embedded/Gadgetron_Controller/"
 
 return {
     "nvim-neo-tree/neo-tree.nvim",
