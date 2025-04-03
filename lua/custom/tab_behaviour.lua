@@ -80,26 +80,27 @@
 --        vim.cmd("normal! b") -- Move to previous word
 --    end
 --end
---
----- Keymaps for Normal Mode
---vim.keymap.set("n", "<Tab>", smart_tab_forward, { noremap = true, silent = true })
---vim.keymap.set("n", "<S-Tab>", smart_tab_backward, { noremap = true, silent = true })
---vim.keymap.set("n", "<Right>", smart_tab_forward, { noremap = true, silent = true })
---vim.keymap.set("n", "<Left>", smart_tab_backward, { noremap = true, silent = true })
---vim.keymap.set("n", "<C-Right>", ctrl_arrow_forward, { noremap = true, silent = true })
---vim.keymap.set("n", "<C-Left>", ctrl_arrow_backward, { noremap = true, silent = true })
---
----- Keymaps for Insert Mode
---vim.keymap.set("i", "<Tab>", insert_mode_tab, { noremap = true, silent = true })
---vim.keymap.set("i", "<S-Tab>", insert_mode_shift_tab, { noremap = true, silent = true })
---vim.keymap.set("i", "<Right>", insert_mode_tab, { noremap = true, silent = true })
---vim.keymap.set("i", "<Left>", insert_mode_shift_tab, { noremap = true, silent = true })
---vim.keymap.set("i", "<C-Right>", insert_mode_tab, { noremap = true, silent = true })
---vim.keymap.set("i", "<C-Left>", insert_mode_shift_tab, { noremap = true, silent = true })
---
----- Automatically Load This File
---if not vim.g.tab_behavior_loaded then
---    vim.g.tab_behavior_loaded = true
---    vim.cmd("luafile " .. debug.getinfo(1).source:sub(2))
---end
---
+
+
+-- Keymaps for Normal Mode
+vim.keymap.set("n", "<Tab>", smart_tab_forward, { noremap = true, silent = true })
+vim.keymap.set("n", "<S-Tab>", smart_tab_backward, { noremap = true, silent = true })
+vim.keymap.set("n", "<Right>", smart_tab_forward, { noremap = true, silent = true })
+vim.keymap.set("n", "<Left>", smart_tab_backward, { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Right>", ctrl_arrow_forward, { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Left>", ctrl_arrow_backward, { noremap = true, silent = true })
+
+-- Keymaps for Insert Mode
+vim.keymap.set("i", "<Tab>", insert_mode_tab, { noremap = true, silent = true })
+vim.keymap.set("i", "<S-Tab>", insert_mode_shift_tab, { noremap = true, silent = true })
+vim.keymap.set("i", "<Right>", insert_mode_tab, { noremap = true, silent = true })
+vim.keymap.set("i", "<Left>", insert_mode_shift_tab, { noremap = true, silent = true })
+vim.keymap.set("i", "<C-Right>", insert_mode_tab, { noremap = true, silent = true })
+vim.keymap.set("i", "<C-Left>", insert_mode_shift_tab, { noremap = true, silent = true })
+
+-- Automatically Load This File
+if not vim.g.tab_behavior_loaded then
+    vim.g.tab_behavior_loaded = true
+    vim.cmd("luafile " .. debug.getinfo(1).source:sub(2))
+end
+
