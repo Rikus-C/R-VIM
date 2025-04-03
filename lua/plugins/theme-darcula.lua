@@ -1,5 +1,5 @@
 return {
-	--"xiantang/darcula-dark.nvim",
+	--antang/darcula-dark.nvim",
 	--config = function()
 	--	-- setup must be called before loading
 	--	require("darcula").setup({

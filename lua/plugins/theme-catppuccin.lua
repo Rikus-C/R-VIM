@@ -4,7 +4,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-        flavour = "macchiato", -- Set the default flavour (mocha, macchiato, frappe, latte)
+        flavour = "mocha", -- Set the default flavour (mocha, macchiato, frappe, latte)
         custom_highlights = function(colors)
             return {
                 -- Customize default variable color
