@@ -4,7 +4,7 @@ DocsDir = "~/Documents/"
 TokensDir = "~/Documents/" .. MainName .. "/Tokens/"
 
 ProADir = "~/Documents/" 
-ProBDir = "~/Documents/" .. MainName .. "/Gateway_Board_Firmware/"
+ProBDir = "~/Desktop/Safari_Systems_LoRa_Modem/"
 ProCDir = "~/Documents/" .. MainName .. "/modules/"
 ProDDir = "~/Documents/" .. MainName .. "/RCM_100_Firmware/"
 ProEDir = "~/Documents/" .. MainName .. "/heltec_code/"

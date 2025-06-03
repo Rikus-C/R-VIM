@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = {"lua_ls", "clangd", "pyright"}
+                ensure_installed = {"lua_ls", "clangd", "pyright", "ts_ls"}
             })
         end
     },
@@ -36,5 +36,13 @@ return {
                 update_in_insert = false, -- Disable updates in insert mode
             })
         end
-    }
+    },
+--    {
+--       "williamboman/mason-lspconfig.nvim",
+--       config = function()
+--           require("mason-lspconfig").setup({
+--               ensure_installed = { "ts_ls" }  -- Replace "tsserver" with "ts_ls"
+--           })
+--       end
+--   }
 }

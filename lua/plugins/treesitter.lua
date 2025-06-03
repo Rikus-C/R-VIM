@@ -11,13 +11,5 @@ return {
 			},
 		}
 		end
-    },
-    {
-        "williamboman/mason-lspconfig.nvim",
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = { "ts_ls" }  -- Replace "tsserver" with "ts_ls"
-            })
-        end
     }
 }

@@ -7,6 +7,9 @@ vim.cmd("set clipboard=unnamedplus") -- Allow use of external clipboard
 vim.cmd('hi! Cursor guifg=none guibg=#00FF00')-- Change cursor color
 -- vim.api.nvim_set_keymap('n', '<C-w>', '<space>w', { noremap = true, silent = true }) -- Remap for jumping between windows
 
+-- Project wide search
+vim.keymap.set("n", "<leader>/", ":Telescope live_grep<CR>", { noremap = true, silent = true, desc = "Live Grep with Telescope" })
+
 -- Remap arrow keys for movement in normal mode
 vim.api.nvim_set_keymap('n', '<Up>', '<Cmd>normal! k<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Down>', '<Cmd>normal! j<CR>', { noremap = true, silent = true })
@@ -18,6 +21,12 @@ vim.api.nvim_set_keymap('v', '<Up>', '<Cmd>normal! k<CR>', { noremap = true, sil
 vim.api.nvim_set_keymap('v', '<Down>', '<Cmd>normal! j<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<Left>', '<Cmd>normal! h<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<Right>', '<Cmd>normal! l<CR>', { noremap = true, silent = true })
+
+-- Page up and down jump distance
+vim.keymap.set('n', '<PageUp>', '5k', { noremap = true, silent = true })
+vim.keymap.set('n', '<PageDown>', '5j', { noremap = true, silent = true })
+vim.keymap.set('v', '<PageUp>', '5k', { noremap = true, silent = true })
+vim.keymap.set('v', '<PageDown>', '5j', { noremap = true, silent = true })
 
 -- Disable line wrapping (line overflow)
 vim.opt.wrap = false
@@ -31,6 +40,17 @@ vim.api.nvim_set_keymap('v', 'y', '"+y', { noremap = true, silent = true })
 -- Yank to clipboard in operator-pending mode (e.g., when using `y` in a motion command)
 vim.api.nvim_set_keymap('o', 'y', '"+y', { noremap = true, silent = true })
 
+-- Runs `make` in a horizontal split
+vim.keymap.set("n", "<leader>c", function()
+  vim.cmd("belowright split | terminal cd _project_ && python3 pro.py clean_project")
+end, { desc = "Run Make" })
 
+-- Runs `make` in a horizontal split
+vim.keymap.set("n", "<leader>b", function()
+  vim.cmd("belowright split | terminal cd _project_ && python3 pro.py build_project")
+end, { desc = "Run Make" })
 
-
+-- Runs `make` in a horizontal split
+vim.keymap.set("n", "<leader>m", function()
+  vim.cmd("belowright split | terminal cd _project_ && python3 pro.py make_project")
+end, { desc = "Run Make" })
