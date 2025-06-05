@@ -10,6 +10,17 @@ vim.cmd('hi! Cursor guifg=none guibg=#00FF00')-- Change cursor color
 -- Project wide search
 vim.keymap.set("n", "<leader>/", ":Telescope live_grep<CR>", { noremap = true, silent = true, desc = "Live Grep with Telescope" })
 
+-- Shortcut to easy close buffer
+vim.keymap.set("n", "<leader>q", ":q<CR>", { noremap = true, silent = true, desc = "Quit window" })
+
+-- Normal mode line swapping
+vim.keymap.set('n', '<A-Up>', ':m .-2<CR>==', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-Down>', ':m .+1<CR>==', { noremap = true, silent = true })
+
+-- Visual mode line swapping
+vim.keymap.set('v', '<A-Up>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set('v', '<A-Down>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+
 -- Remap arrow keys for movement in normal mode
 vim.api.nvim_set_keymap('n', '<Up>', '<Cmd>normal! k<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Down>', '<Cmd>normal! j<CR>', { noremap = true, silent = true })
@@ -40,17 +51,23 @@ vim.api.nvim_set_keymap('v', 'y', '"+y', { noremap = true, silent = true })
 -- Yank to clipboard in operator-pending mode (e.g., when using `y` in a motion command)
 vim.api.nvim_set_keymap('o', 'y', '"+y', { noremap = true, silent = true })
 
--- Runs `make` in a horizontal split
+-- Runs command in a horizontal split
 vim.keymap.set("n", "<leader>c", function()
   vim.cmd("belowright split | terminal cd _project_ && python3 pro.py clean_project")
 end, { desc = "Run Make" })
 
--- Runs `make` in a horizontal split
+-- Runs command in a horizontal split
 vim.keymap.set("n", "<leader>b", function()
   vim.cmd("belowright split | terminal cd _project_ && python3 pro.py build_project")
 end, { desc = "Run Make" })
 
--- Runs `make` in a horizontal split
+-- Runs command in a horizontal split
 vim.keymap.set("n", "<leader>m", function()
   vim.cmd("belowright split | terminal cd _project_ && python3 pro.py make_project")
 end, { desc = "Run Make" })
+
+-- Runs command in a horizontal split
+vim.keymap.set("n", "<leader>t", function()
+  vim.cmd("belowright split | terminal cd tracelogger && python3 main.py")
+end, { desc = "Run Make" })
+

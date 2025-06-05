@@ -8,7 +8,7 @@ return {
         config = function()
             local builtin = require("telescope.builtin")
             vim.keymap.set('n', '<C-p>', require('telescope.builtin').buffers, { noremap = true, silent = true })
-            --vim.keymap.set("n", "<C-p>", builtin.find_files, {}) -- Fuzzy Finder
+            vim.keymap.set("n", "<C-o>", builtin.find_files, {}) -- Fuzzy Finder
         end
     },
     {

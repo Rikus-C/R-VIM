@@ -5,7 +5,7 @@ TokensDir = "~/Documents/" .. MainName .. "/Tokens/"
 
 ProADir = "~/Documents/" 
 ProBDir = "~/Desktop/Safari_Systems_LoRa_Modem/"
-ProCDir = "~/Documents/" .. MainName .. "/modules/"
+ProCDir = "~/Desktop/Tracelogger"
 ProDDir = "~/Documents/" .. MainName .. "/RCM_100_Firmware/"
 ProEDir = "~/Documents/" .. MainName .. "/heltec_code/"
 ProFDir = "~/Documents/" .. MainName .. "/products/embedded_level/RCM_101_LoRa_Card/RCM_101_Firmware/"
