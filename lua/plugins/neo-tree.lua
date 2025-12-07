@@ -3,9 +3,9 @@ MainName = "Safari_Systems"
 DocsDir = "~/Documents/"
 TokensDir = "~/Documents/" .. MainName .. "/Tokens/"
 
-ProADir = "~/Documents/" 
-ProBDir = "~/Desktop/Safari_Systems_LoRa_Modem/"
-ProCDir = "~/Desktop/Tracelogger"
+ProADir = "~/Documents/"
+ProBDir = "/home/rikus/Documents/Repos/nucleo-f411re-demo/"
+ProCDir = "~/Desktop/Repos/tracker_firmware/"
 ProDDir = "~/Documents/" .. MainName .. "/RCM_100_Firmware/"
 ProEDir = "~/Documents/" .. MainName .. "/heltec_code/"
 ProFDir = "~/Documents/" .. MainName .. "/products/embedded_level/RCM_101_LoRa_Card/RCM_101_Firmware/"
@@ -31,7 +31,7 @@ return {
                 }
             }
         }
-        vim.keymap.set("n", "<C-f>", ":Neotree " .. StartDir .. " filesystem reveal left<CR>") -- Neotree @ Start
+        vim.keymap.set("n", "<C-f>", ":Neotree " .. ProBDir .. " filesystem reveal left<CR>") -- Neotree @ Start
         vim.keymap.set("n", "<C-g>", ":Neotree ~/.config/nvim filesystem reveal left<CR>") -- Neotree @ Config
 --        vim.keymap.set("n", "<C-d>", ":Neotree ~/Documents filesystem reveal left<CR>") -- Neotree @ Documents
         vim.keymap.set("n", "<C-k>", ":Neotree " .. TokensDir .. " filesystem reveal left<CR>") -- Neotree @ Git Tokens
